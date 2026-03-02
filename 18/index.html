@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    padding: 40px 20px;
+}
+
+/* Glowing Name */
+.glow-name {
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px hotpink,
+                     0 0 20px hotpink,
+                     0 0 30px hotpink;
+    }
+    to {
+        text-shadow: 0 0 20px #ff4ecb,
+                     0 0 40px #ff4ecb,
+                     0 0 60px #ff4ecb;
+    }
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    animation: fadeIn 1.2s ease-in-out;
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    padding: 12px 35px;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: hotpink;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: 80px;
+    background: hotpink;
+    border-radius: 50%;
+    animation: float 10s linear infinite;
+    opacity: 0.7;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: white;
+    left: 50%;
+    top: 80px;
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    background: #ff4ecb;
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    background: #ff1493;
+    animation-duration: 12s;
+}
+
+.balloon:nth-child(3) {
+    left: 60%;
+    background: #ff69b4;
+    animation-duration: 10s;
+}
+
+.balloon:nth-child(4) {
+    left: 80%;
+    background: #ff85d0;
+    animation-duration: 9s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<div class="card">
+
+    <!-- CHANGE THE NAME BELOW -->
+    <div class="glow-name">HAPPY BIRTHDAY BABYYY ❤️🎉</div>
+
+    <p>
+        Happy Birthday babyyyy! Today is the day you are celebrating the amazing day and a once in a lifetime day, YOUR 18TH BIRTHDAY.I hope you know that your kindness, strength, and beauty make the world brighter.
+    </p>
+
+    <p>
+        May this new year of your life bring you endless joy, and unforgettable memories. You deserve every happiness babyyy!!!
+    </p>
+
+    <p>
+        Keep dreaming big and believing in yourself babyy koo, because there is nothing you cannot achieve. I wish that your future is filled with beautiful surprises.
+    </p>
+
+    <p>
+        Never forget how loved and appreciated you are. You make life better and happier just by being in it, and that is something special with you babyyy.
+    </p>
+
+    <p>
+        I may have nothing to give or offer right now, But you stayed, loved, and cared about me. Thank youuu and I LOVEE YOUUU ALWAYSSSS
+    </p>
+
+    <a href="pictures.html" class="btn">View our pictures 🎂</a>
+
+</div>
+
+</body>
+</html>
